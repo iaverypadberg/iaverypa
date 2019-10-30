@@ -1,14 +1,27 @@
 #include "test.h"
+#include "MyException.h"
 #include <iostream>
 #include <vector>
+#include <exception>
 
 using namespace std;
 
 int main() {
 
-   cout<< recursive(5);
-   cout<<"hhd";
+    //Recursive test
+   cout<< test::recursive(5);
 
+   //Exception testing
+   std::vector<int> input{111111};
+
+
+   try {
+       test::indexListToPhrase(input);
+   }
+   catch(MyException ab){
+       cout<<ab.what()<<"\n";
+
+   }
     std::vector<std::string> wordList;
     std::vector<int> entropy;
 

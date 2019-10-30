@@ -3,4 +3,4 @@ project(Testing)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Testing main.cpp test.cpp test.h)
+add_executable(Testing main.cpp test.cpp test.h MyException.cpp MyException.h)
