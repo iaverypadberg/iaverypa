@@ -6,14 +6,13 @@
 
 using namespace std;
 
-int main() {
+int main() { //FIXME a clever way to flag things that need fixing
 
     //Recursive test
-   cout<< test::recursive(5);
+   cout<< test::recursive(5)<<"\n";
 
    //Exception testing
-   std::vector<int> input{111111};
-
+   std::vector<int> input{1};
 
    try {
        test::indexListToPhrase(input);
@@ -22,6 +21,24 @@ int main() {
        cout<<ab.what()<<"\n";
 
    }
+
+    //Recursive Binary Search testing
+    try {
+        std::vector<int> sortedNumbers{};
+        //Define target
+        int target = 33;
+        //Find the size of the input entered
+        int n = sizeof(sortedNumbers) / sizeof(sortedNumbers[0]);
+        //Binary Search
+        int result = test::binarySearch(sortedNumbers, target, 0, n - 1);
+
+        cout << "The number you searched for was found at index " << result << "\n";
+    }
+    catch(MyException ex){
+        cout<<ex.what()<<"\n";
+    }
+
+
     std::vector<std::string> wordList;
     std::vector<int> entropy;
 
