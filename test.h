@@ -14,6 +14,17 @@
 //test::int val
 //All function definitions belong here
 namespace test {
+
+    void printArray(std::vector<int>* vector,int size);
+
+    void implementQuickSort(std::vector<int>* toBeSorted);
+
+    int paritition(std::vector<int>* unsortedVec, int low, int high);
+
+    void quickSort(std::vector<int>* unsortedVec,  int low, int high);
+
+    void swap(int* i, int* x);
+
     int recursive(int i);
 
     std::vector<std::string> indexListToPhrase(std::vector<int> indexList);
